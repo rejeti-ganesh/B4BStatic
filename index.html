@@ -152,8 +152,8 @@
     <div class="w3-container w3-black w3-padding-32">
       <h1>Subscribe</h1>
       <p>To get special offers :</p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-      <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+      <p><input class="w3-input w3-border" id="subscribeText" type="text" placeholder="Your request in words..." style="width:100%"></p>
+      <a href = "mailto:brush4blush@gmail.com?subject=Subscription Request" class="w3-button w3-red w3-margin-bottom">Subscribe</a>
     </div>
 
     <!-- Footer -->
@@ -186,7 +186,7 @@
           <h4>Store</h4>
           <p><i class="fa fa-fw fa-map-marker"></i> Brush4Blush</p>
           <p><a href="tel:91-7093582692"><i class="fa fa-fw fa-phone"></i>+91-7093582692</a></p>
-          <p><a href = "mailto: brush4blush@gmail.com"><i class="fa fa-fw fa-envelope"></i> brush4blush@gmail.com</a></p>
+          <p><a href = "mailto: brush4blush@gmail.com?subject=Enquiry Request"><i class="fa fa-fw fa-envelope"></i> brush4blush@gmail.com</a></p>
           <h4>We accept</h4>
           <p><i class="fa fa-fw fa-cc-amex"></i> UPI</p>
           <p><i class="fa fa-fw fa-credit-card"></i> Debit Cards</p>
@@ -249,6 +249,9 @@
       document.getElementById("mySidebar").style.display = "none";
       document.getElementById("myOverlay").style.display = "none";
     }
+    
+    let text = document.getElementById("subscribeText").textContent;
+	document.getElementById("emailContent").innerHTML = text; 
   </script>
 
 </body>
