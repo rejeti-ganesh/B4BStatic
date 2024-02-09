@@ -1,52 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Page Title</title>
 	<link rel="stylesheet" href="./BrusherForm.css">
-	<script src="BrusherForm.js" type="module"></script>
 </head>
 <body>
 	<div class="container">
-        <div class="card">
-			<h2>Registration</h2>
-           <!-- <a class="singup">Registration</a>-->
+		<form method="post" action="" name="contact-form">
+			<h4>Brusher Registration</h4>
+			<input type="text" name="Name" placeholder="Name">
+			<input type="date" name="DOB" placeholder="Date Of Birth">
+			<input type="text" name="Ph.Number" maxlength="10" placeholder="Phone Number">
+			<input type="text" name="Alt.Number" maxlength="10" placeholder="Alternative Number">
+			<input type="email" name="mail" placeholder="Email">
+			<textarea name="Permanent address" rows="5" placeholder="Permanent address"></textarea>
+			<textarea name="Present Address" rows="5" placeholder="Present Address"></textarea>
+			<label for="PhotoIDtype">Choose a PhotoId Type</label>
+				<select name="PhotoIDtype" id="PhotoIDtype">
+				  <option value="Pan">Pan Card</option>
+				  <option value="DL">Driving Licence</option>
+				  <option value="Passport">PassPort</option>
+				  <option value="Voter">Voter ID</option>
+				</select>
+			<input type="text" name="PhotoIDNumber" placeholder="Photo ID Number">
+			<input type="submit" value="Submit" id="submit">
+		</form>
+	</div>
 
-            <div class="inputBox">
-                <input type="text" required="required">
-                <span>Full Name</span>
-            </div>
-			<div class="inputBox">
-                <input type="text" required="required">
-                <span>Phone Number</span>
-            </div>
-            <div class="inputBox">
-                <input type="text" required="required">
-                <span>Alternate Number</span>
-            </div>
-			<div class="inputBox">
-                <input type="text" required="required">
-                <span>Permanent Address</span>
-            </div>
-            <div class="inputBox">
-                <input type="text" required="required">
-                <span>Current Address</span>
-            </div>
-			<div class="inputBox">
-                <input type="text" required="required">
-                <span>Mail</span>
-            </div>
-            <div class="inputBox">
-                <input type="text" required="required">
-                <span>Photo ID Type</span>
-            </div>
-            <div class="inputBox">
-                <input type="text" required="required">
-                <span>Photo ID Number</span>
-            </div>
-            
-            <button class="enter">Register</button>
-
-        </div>
-    </div>
+	<script src="BrusherForm.js"></script>
 </body>
 </html>
