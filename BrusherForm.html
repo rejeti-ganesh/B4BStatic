@@ -7,21 +7,30 @@
 	<div class="container">
 		<form method="post" action="" name="contact-form">
 			<h4>Brusher Registration</h4>
-			<input type="text" name="Name" placeholder="Name">
-			<input type="date" name="DOB" placeholder="Date Of Birth">
-			<input type="text" name="Ph.Number" maxlength="10" placeholder="Phone Number">
-			<input type="text" name="Alt.Number" maxlength="10" placeholder="Alternative Number">
-			<input type="email" name="mail" placeholder="Email">
-			<textarea name="Permanent address" rows="5" placeholder="Permanent address"></textarea>
+			<input type="text" name="Name" maxlength="50" onkeydown="return /[a-zA-Z\s]/i.test(event.key)" placeholder="Full Name" required>
+			
+			<input type="text" name="DOB" max="2005-01-01" onfocus="(this.type='date')" placeholder="Date Of Birth" required>
+			
+			<input type="text" name="Ph.Number" onkeydown="return /[0-9]/i.test(event.key)" maxlength="10" placeholder="Phone Number" required>
+			
+			<input type="text" name="Alt.Number" onkeydown="return /[0-9]/i.test(event.key)" maxlength="10" placeholder="Alternative Number" required>
+			
+			<input type="email" name="mail" placeholder="Email" required	>
+			
+			<textarea name="Permanent address" rows="5" placeholder="Permanent address" required></textarea>
+			
 			<textarea name="Present Address" rows="5" placeholder="Present Address"></textarea>
+			
 			<label for="PhotoIDtype">Choose a PhotoId Type</label>
-				<select name="PhotoIDtype" id="PhotoIDtype">
+				<select name="PhotoIDtype" id="PhotoIDtype" required>
 				  <option value="Pan">Pan Card</option>
 				  <option value="DL">Driving Licence</option>
 				  <option value="Passport">PassPort</option>
 				  <option value="Voter">Voter ID</option>
 				</select>
-			<input type="text" name="PhotoIDNumber" placeholder="Photo ID Number">
+			
+			<input type="text" name="PhotoIDNumber" maxlength="20" placeholder="Photo ID Number" required>
+			
 			<input type="submit" value="Submit" id="submit">
 		</form>
 	</div>
